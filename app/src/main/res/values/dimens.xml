@@ -1,0 +1,12 @@
+<resources>
+
+    <dimen name="dialog_width">240dp</dimen>
+    <dimen name="dialog_msg_size_24sp">20sp</dimen>
+    <dimen name="dialog_btn_width">90dp</dimen>
+    <dimen name="dialog_btn_height">35dp</dimen>
+    <dimen name="dialog_btn_size_16sp">16sp</dimen>
+
+    <dimen name="settings_item_height">60dp</dimen>
+
+
+</resources>

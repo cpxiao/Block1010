@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fragment_home_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="100dp">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="30dp"
+        android:text="@string/app_name"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="48sp"/>
+
+    <LinearLayout
+        style="@style/HomeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <ImageButton
+            android:id="@+id/btn_play"
+            style="@style/HomeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/home_btn_bg_play"
+            android:src="@drawable/ic_play"
+            android:text="@string/play"
+            android:textSize="40sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/HomeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/rate"
+            style="@style/HomeBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/home_btn_bg_rate"
+            android:src="@drawable/ic_rate"
+            android:text="@string/rate"/>
+
+        <ImageButton
+            android:id="@+id/best_score"
+            style="@style/HomeBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/home_btn_bg_best_score"
+            android:src="@drawable/ic_best"
+            android:text="@string/best_score"/>
+
+        <ImageButton
+            android:id="@+id/settings"
+            style="@style/HomeBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/home_btn_bg_share"
+            android:src="@drawable/ic_settings"
+            android:text="@string/settings"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

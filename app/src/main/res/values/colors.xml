@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+
+    <color name="colorBlockDefault">#e0e0e0</color>
+    <color name="colorBackgroundDefault">#ffffff</color>
+
+
+    <string-array name="app">
+        <item>#d958cc</item>
+        <item>#0be2ae</item>
+        <item>#f79328</item>
+        <item>#e7cf60</item>
+        <item>#60dc61</item>
+        <item>#2dd2cd</item>
+        <item>#315ae1</item>
+        <item>#e7486d</item>
+        <item>#926eec</item>
+        <item>#80cf66</item>
+    </string-array>
+
+
+    <color name="color_text_mode">#fab52c</color>
+    <color name="color_text_score">#86c65e</color>
+    <color name="color_text_best">#364cae</color>
+
+</resources>
