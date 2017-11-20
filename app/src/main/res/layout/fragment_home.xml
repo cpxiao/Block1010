@@ -17,12 +17,41 @@
         android:padding="30dp"
         android:text="@string/app_name"
         android:textColor="@android:color/holo_blue_dark"
-        android:textSize="48sp"/>
+        android:textSize="42sp"/>
 
     <LinearLayout
         style="@style/HomeLayout"
         android:layout_width="match_parent"
-        android:layout_height="150dp">
+        android:layout_height="80dp"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/rate"
+            style="@style/HomeBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/home_btn_bg_rate"
+            android:src="@drawable/ic_rate"
+            android:text="@string/rate"/>
+
+        <ImageButton
+            android:id="@+id/share"
+            style="@style/HomeBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/home_btn_bg_share"
+            android:src="@drawable/ic_share"
+            android:text="@string/share"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/HomeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
 
         <ImageButton
             android:id="@+id/btn_play"
@@ -38,18 +67,18 @@
     <LinearLayout
         style="@style/HomeLayout"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:gravity="center">
 
         <ImageButton
-            android:id="@+id/rate"
+            android:id="@+id/settings"
             style="@style/HomeBtn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/home_btn_bg_rate"
-            android:src="@drawable/ic_rate"
-            android:text="@string/rate"/>
+            android:background="@drawable/home_btn_bg_settings"
+            android:src="@drawable/ic_settings"
+            android:text="@string/settings"/>
 
         <ImageButton
             android:id="@+id/best_score"
@@ -61,15 +90,6 @@
             android:src="@drawable/ic_best"
             android:text="@string/best_score"/>
 
-        <ImageButton
-            android:id="@+id/settings"
-            style="@style/HomeBtn"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/home_btn_bg_share"
-            android:src="@drawable/ic_settings"
-            android:text="@string/settings"/>
 
     </LinearLayout>
 

@@ -9,7 +9,8 @@ import android.widget.ImageButton;
 
 import com.cpxiao.R;
 import com.cpxiao.androidutils.library.utils.PreferencesUtils;
-import com.cpxiao.androidutils.library.utils.RateUtils;
+import com.cpxiao.androidutils.library.utils.RateAppUtils;
+import com.cpxiao.androidutils.library.utils.ShareAppUtils;
 import com.cpxiao.block1010.mode.extra.Extra;
 import com.cpxiao.gamelib.fragment.BaseZAdsFragment;
 import com.cpxiao.zads.core.ZAdPosition;
@@ -32,13 +33,15 @@ public class HomeFragment extends BaseZAdsFragment implements View.OnClickListen
     protected void initView(View view, Bundle savedInstanceState) {
         loadZAds(ZAdPosition.POSITION_HOME);
 
-        ImageButton btnEasy = (ImageButton) view.findViewById(R.id.btn_play);
+        ImageButton btnPlay = (ImageButton) view.findViewById(R.id.btn_play);
         ImageButton btnRate = (ImageButton) view.findViewById(R.id.rate);
+        ImageButton btnShare = (ImageButton) view.findViewById(R.id.share);
         ImageButton btnBestScore = (ImageButton) view.findViewById(R.id.best_score);
         ImageButton btnSettings = (ImageButton) view.findViewById(R.id.settings);
 
-        btnEasy.setOnClickListener(this);
+        btnPlay.setOnClickListener(this);
         btnRate.setOnClickListener(this);
+        btnShare.setOnClickListener(this);
         btnBestScore.setOnClickListener(this);
         btnSettings.setOnClickListener(this);
     }
@@ -56,9 +59,12 @@ public class HomeFragment extends BaseZAdsFragment implements View.OnClickListen
             Bundle bundle = GameFragment.makeBundle(true);
             addFragment(GameFragment.newInstance(bundle));
         } else if (id == R.id.rate) {
-            //            RateUtils.rateToDetailPage(context);
-            //            RateUtils.rateToSearchPage(context);
-            RateUtils.rate(context);
+            RateAppUtils.rate(context);
+        } else if (id == R.id.share) {
+            String msg = getString(R.string.share_msg) + "\n" +
+                    getString(R.string.app_name) + "\n" +
+                    "https://play.google.com/store/apps/details?id=" + context.getPackageName();
+            ShareAppUtils.share(context, getString(R.string.share), msg);
         } else if (id == R.id.best_score) {
             showBestScoreDialog(context);
         } else if (id == R.id.settings) {

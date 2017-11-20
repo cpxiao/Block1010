@@ -222,6 +222,9 @@ public class GameView extends BaseSurfaceView {
 
     @Override
     public void drawCache() {
+        if (mCanvasCache == null || mBaseBlockArray == null) {
+            return;
+        }
         mCanvasCache.drawColor(ContextCompat.getColor(mContext, R.color.colorBackgroundDefault));
         drawBlocks(mCanvasCache);
         drawAllBaseBlock(mCanvasCache, mBaseBlockArray);

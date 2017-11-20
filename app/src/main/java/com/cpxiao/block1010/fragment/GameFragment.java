@@ -99,13 +99,18 @@ public class GameFragment extends BaseZAdsFragment implements onGameListener {
         if (isMusicOn) {
             MediaPlayerUtils.getInstance().start();
         }
+        if (mGameView != null) {
+            mGameView.myDraw();
+        }
     }
 
     @Override
     public void onPause() {
         super.onPause();
         MediaPlayerUtils.getInstance().pause();
-        mGameView.save();
+//        if (mGameView != null) {
+//            mGameView.save();
+//        }
     }
 
     @Override

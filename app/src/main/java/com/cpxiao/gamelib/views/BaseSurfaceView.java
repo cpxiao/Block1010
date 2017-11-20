@@ -152,7 +152,7 @@ public abstract class BaseSurfaceView extends SurfaceView implements SurfaceHold
      */
     public abstract void drawCache();
 
-    protected void myDraw() {
+    public void myDraw() {
         Canvas canvas = null;
         try {
             if (mSurfaceHolder != null && mBitmapCache != null && mPaint != null) {

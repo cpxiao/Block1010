@@ -4,14 +4,14 @@
     <!-- 未选中状态 -->
     <item android:state_pressed="false">
         <shape>
-            <solid android:color="#403938"/>
+            <solid android:color="#537bf4"/>
             <corners android:radius="8dp" />
         </shape>
     </item>
     <!-- 选中状态 -->
     <item android:state_pressed="true">
         <shape>
-            <solid android:color="#102e33"/>
+            <solid android:color="#6298f1"/>
             <corners android:radius="8dp"/>
         </shape>
     </item>

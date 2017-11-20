@@ -11,7 +11,7 @@
     <!-- 选中状态 -->
     <item android:state_pressed="true">
         <shape>
-            <solid android:color="#febb30"/>
+            <solid android:color="#fad586"/>
             <corners android:radius="8dp"/>
         </shape>
     </item>

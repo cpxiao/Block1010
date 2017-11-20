@@ -10,8 +10,8 @@ android {
         applicationId "com.cpxiao.block1010.puzzle"
         minSdkVersion 15//使用freeline测试的时候最低14，之后改回对应版本9
         targetSdkVersion 23
-        versionCode 108
-        versionName "1.0.8"
+        versionCode 112
+        versionName "1.1.2"
     }
 
     buildTypes {
@@ -65,7 +65,7 @@ android {
 }
 
 dependencies {
-    compile project(':AndroidUtils:library')
+    compile project(':__AndroidUtils:library')
     compile 'com.android.support:appcompat-v7:25.3.1'
 
     /**
