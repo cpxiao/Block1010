@@ -34,7 +34,7 @@ public class HomeFragment extends BaseZAdsFragment implements View.OnClickListen
         loadZAds(ZAdPosition.POSITION_HOME);
 
         ImageButton btnPlay = (ImageButton) view.findViewById(R.id.btn_play);
-        ImageButton btnRate = (ImageButton) view.findViewById(R.id.rate);
+        ImageButton btnRate = (ImageButton) view.findViewById(R.id.rate_app);
         ImageButton btnShare = (ImageButton) view.findViewById(R.id.share);
         ImageButton btnBestScore = (ImageButton) view.findViewById(R.id.best_score);
         ImageButton btnSettings = (ImageButton) view.findViewById(R.id.settings);
@@ -58,7 +58,7 @@ public class HomeFragment extends BaseZAdsFragment implements View.OnClickListen
         if (id == R.id.btn_play) {
             Bundle bundle = GameFragment.makeBundle(true);
             addFragment(GameFragment.newInstance(bundle));
-        } else if (id == R.id.rate) {
+        } else if (id == R.id.rate_app) {
             RateAppUtils.rate(context);
         } else if (id == R.id.share) {
             String msg = getString(R.string.share_msg) + "\n" +

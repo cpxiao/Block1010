@@ -4,7 +4,7 @@ apply plugin: 'com.jakewharton.hugo'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    buildToolsVersion '26.0.2'
 
     defaultConfig {
         applicationId "com.cpxiao.block1010.puzzle"
@@ -12,6 +12,7 @@ android {
         targetSdkVersion 23
         versionCode 112
         versionName "1.1.2"
+        flavorDimensions "channel"
     }
 
     buildTypes {
@@ -37,29 +38,39 @@ android {
 //    }
 
     //修改生成的apk名字
-    applicationVariants.all { variant ->
-        variant.outputs.each { output ->
-            def oldFile = output.outputFile
-            def packageName = applicationId;
-            if (variant.buildType.name.equals('release')) {
-                def releaseApkName = packageName +
-                        "_v" + defaultConfig.versionName +
-                        "_" + variant.productFlavors[0].name +
-                        "_" + new Date().format('yyyyMMddHHmm') +
-                        '.apk'
-                output.outputFile = new File(oldFile.parent, releaseApkName)
-            }
-            if (variant.buildType.name.equals('beta')) {
-                def baseApkName = packageName +
-                        "_v" + defaultConfig.versionName + "beta" +
-                        "_" + variant.productFlavors[0].name +
-                        "_" + new Date().format('yyyyMMddHHmm') +
-                        '.apk'
-                output.outputFile = new File(oldFile.parent, baseApkName)
-            }
-            if (variant.buildType.name.equals('debug')) {
+//    applicationVariants.all { variant ->
+//        variant.outputs.each { output ->
+//            def oldFile = output.outputFile
+//            def packageName = applicationId;
+//            if (variant.buildType.name.equals('release')) {
+//                def releaseApkName = packageName +
+//                        "_v" + defaultConfig.versionName +
+//                        "_" + variant.productFlavors[0].name +
+//                        "_" + new Date().format('yyyyMMddHHmm') +
+//                        '.apk'
+//                output.outputFile = new File(oldFile.parent, releaseApkName)
+//            }
+//            if (variant.buildType.name.equals('beta')) {
+//                def baseApkName = packageName +
+//                        "_v" + defaultConfig.versionName + "beta" +
+//                        "_" + variant.productFlavors[0].name +
+//                        "_" + new Date().format('yyyyMMddHHmm') +
+//                        '.apk'
+//                output.outputFile = new File(oldFile.parent, baseApkName)
+//            }
+//            if (variant.buildType.name.equals('debug')) {
+//
+//            }
+//        }
+//    }
 
-            }
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = applicationId +
+                    "_v" + defaultConfig.versionName +
+                    "_" + variant.productFlavors[0].name +
+                    "_" + new Date().format('yyyyMMddHHmm') +
+                    '.apk'
         }
     }
 }
